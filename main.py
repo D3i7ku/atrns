@@ -1,5 +1,6 @@
 from configparser import ConfigParser
 from javascript import require, On
+from keep_alive import keep_alive
 mineflayer = require('mineflayer')
 import threading, os
 from sys import platform
@@ -74,6 +75,8 @@ def stop():
         bm.configure(text='Bot offline', font=('Arial Black', 20))
     except:
         pass
+
+keep_alive()
 
 if __name__ == "__main__":
     start()
